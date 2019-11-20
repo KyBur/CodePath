@@ -40,7 +40,6 @@ class SettingsViewController: UIViewController {
             Globals.Colors.colorLight = UIColor(red:255/255, green:120/255, blue:125/255, alpha: 1)
             Globals.Colors.colorDark = UIColor(red:232/255, green:0/255, blue:0/255, alpha: 1)
         }
-        
         //Update Settings
         Globals.Setting.currencyIndex = currencySegment.selectedSegmentIndex
         Globals.Setting.colorIndex = colorSegment.selectedSegmentIndex
