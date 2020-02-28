@@ -27,7 +27,6 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
                 print(error.localizedDescription)
             } else if let data = data,
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                print(dataDictionary)
                 
                 // TODO: Get the posts and store in posts property
                 // Get the dictionary from the response key
@@ -41,12 +40,21 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotoDetailsViewController
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let post = posts[indexPath.row]
+        vc.post = post
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell") as! PhotoTableViewCell
         
         let post = posts[indexPath.row]
         
@@ -65,7 +73,6 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
             cell.myImageView.af_setImage(withURL: url!)
             
         }
-        
         
         return cell
     }

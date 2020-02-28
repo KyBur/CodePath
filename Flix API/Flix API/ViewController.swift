@@ -42,6 +42,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         task.resume()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! MovieDetailViewController
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        vc.movie = movie
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
