@@ -48,6 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let indexPath = tableView.indexPath(for: cell)!
         let movie = movies[indexPath.row]
         vc.movie = movie
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     
