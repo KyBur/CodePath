@@ -12,8 +12,10 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (3pts) User can view the movie poster image for each movie.
 
 ### App Walkthough GIF
-
+##### Now Playing Movies Table View:
 <img src="https://i.imgflip.com/3puqus.gif" width=250><br>
 
+##### Superhero Movies Collection View:
+<img src="https://i.imgflip.com/3qkwud.gif" width=250><br>
 ### Notes
-This was a fun project testing out the flix API
+This was a fun project testing out the moviedb API in a flix like format
