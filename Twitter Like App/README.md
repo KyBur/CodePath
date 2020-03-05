@@ -1,23 +1,18 @@
-# Project 3 - *Name of App Here*
+# Project 3 - *Twitter Like App*
 
-**Name of your app** is a basic twitter app to read your tweets.
-
-Time spent: **X** hours spent in total
+A basic twitter clone app for signing into twitter and viewing tweets
 
 ## User Stories
 
-The following **required** functionality is completed:
+The following features were implemented:
 
-- [ ] User sees app icon in home screen and styled launch screen. (1pt)
-- [ ] User can log in. (1pt)
-- [ ] User can log out. (1pt)
-- [ ] User stays logged in across restarts. (1pt)
-- [ ] User can view tweets with the user profile picture, username, and tweet text. (6pts)
-
-The following **bonus** features are implemented:
-
-- [ ] User can pull to refresh. (1pt)
-- [ ] User can load past tweets infinitely. (2pts)
+- User sees app icon in home screen and styled launch screen.
+- User can log in
+- User can log out
+- User stays logged in across restarts
+- User can view tweets with the user profile picture, username, and tweet text
+- User can pull to refresh
+- User can load past tweets infinitely
 
 ## Video Walkthrough
 
