@@ -18,5 +18,5 @@ The following features were implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/0RNk3VT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/0RNk3VT' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
