@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="scx-7R-Lir">
+                                <rect key="frame" x="122" y="273" width="131" height="121"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29754245281219482" green="0.61981052160263062" blue="0.92160791158676147" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="scx-7R-Lir" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Aqc-P6-J5A"/>
+                            <constraint firstItem="scx-7R-Lir" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="122" id="TXa-GW-JwQ"/>
+                            <constraint firstItem="scx-7R-Lir" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XSb-Cy-g4Y"/>
+                            <constraint firstItem="scx-7R-Lir" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="253" id="ybn-oE-xv3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TwitterLogo" width="120" height="120"/>
+    </resources>
+</document>
