@@ -18,5 +18,5 @@ The following features were implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="https://i.imgflip.com/3rgqlq.gif" width=250><br>
+<img src="https://i.imgflip.com/gif/3sexc0.gif" width=250><br>
 
