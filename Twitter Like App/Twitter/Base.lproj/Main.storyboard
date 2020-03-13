@@ -135,10 +135,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-Kn-f6H">
                                                     <rect key="frame" x="245" y="88" width="29" height="30"/>
                                                     <state key="normal" image="favor-icon"/>
+                                                    <connections>
+                                                        <action selector="likeAction:" destination="HVJ-5D-NDJ" eventType="touchUpInside" id="dFB-gJ-gjt"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uem-wM-7oU">
                                                     <rect key="frame" x="172" y="88" width="31" height="30"/>
                                                     <state key="normal" image="retweet-icon"/>
+                                                    <connections>
+                                                        <action selector="retweetAction:" destination="HVJ-5D-NDJ" eventType="touchUpInside" id="kia-ao-1Yt"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -160,7 +166,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeBtn" destination="XAU-Kn-f6H" id="9bU-iV-684"/>
                                             <outlet property="profileImageView" destination="sBf-GZ-di1" id="BlZ-5F-mhz"/>
+                                            <outlet property="retweetBtn" destination="Uem-wM-7oU" id="bnE-zU-0KB"/>
                                             <outlet property="tweetTextLabel" destination="ASr-fg-9Bf" id="k8H-r5-6wu"/>
                                             <outlet property="usernameLabel" destination="OVb-76-Txg" id="eEw-Bc-iYx"/>
                                         </connections>

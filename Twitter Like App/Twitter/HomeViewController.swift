@@ -96,8 +96,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         
-        
-        
+        cell.setLikes(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = (tweetArray[indexPath.row]["id"] as! Int)
         return cell
     }
     
