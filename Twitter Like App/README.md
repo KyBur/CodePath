@@ -13,10 +13,13 @@ The following features were implemented:
 - User can view tweets with the user profile picture, username, and tweet text
 - User can pull to refresh
 - User can load past tweets infinitely
+- User can compose a tweet
+- User can favorite a tweet
+- User can retweet a tweet
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src="https://i.imgflip.com/3rgqlq.gif" width=250><br>
+<img src="https://i.imgflip.com/3sexrg.gif" width=250><br>
 
