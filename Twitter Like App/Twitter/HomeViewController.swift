@@ -34,7 +34,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         refreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = refreshControl
-
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
+    }
+    @IBAction func addTweetAction(_ sender: Any) {
+        
     }
     @objc func loadTweets(){
         tweetQuantity = 30
@@ -49,7 +55,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
-        }, failure: { (Error) in
+        }, failure: { (error) in
             print("Failed to retrieve tweets")
         })
     }
