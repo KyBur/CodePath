@@ -18,6 +18,7 @@ class TweetViewController: UIViewController, UITextViewDelegate {
         tweetContent!.delegate = self
         tweetBtn.layer.cornerRadius = 10
         tweetContent.becomeFirstResponder()
+        //profileImg.image = TwitterAPICaller.client?.
         // Do any additional setup after loading the view.
     }
     @IBAction func cancelAction(_ sender: Any) {
