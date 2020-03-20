@@ -12,8 +12,15 @@ import XLPagerTabStrip
 class SearchParentViewController: ButtonBarPagerTabStripViewController {
 
     override func viewDidLoad() {
+        
         let navigationBar = navigationController!.navigationBar
         navigationBar.clipsToBounds = true
+        
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Search Twitter"
+        searchBar.setSearchBarProperties(searchBar: searchBar)
+        
+        navigationItem.titleView = searchBar
         
         let twitterBlue = UIColor(displayP3Red: 77/255, green: 159/255, blue: 236/255, alpha: 1)
         
@@ -65,4 +72,32 @@ class SearchParentViewController: ButtonBarPagerTabStripViewController {
     }
     */
 
+}
+
+extension UISearchBar {
+    func changeSearchBarColor(color : UIColor) {
+        for subView in self.subviews {
+            for subSubView in subView.subviews {
+                
+                if let _ = subSubView as? UITextInputTraits {
+                    let textField = subSubView as! UITextField
+                    textField.backgroundColor = color
+                    break
+                }
+                
+            }
+        }
+    }
+    func setSearchBarProperties(searchBar : UISearchBar){
+        searchBar.sizeToFit()
+        searchBar.changeSearchBarColor(color: UIColor(displayP3Red: 230/255, green: 235/255, blue: 240/255, alpha: 1))
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.blue
+            if let backgroundview = textfield.subviews.first {
+                backgroundview.backgroundColor = UIColor.blue
+                backgroundview.layer.cornerRadius = 20;
+                backgroundview.clipsToBounds = true;
+            }
+        }
+    }
 }

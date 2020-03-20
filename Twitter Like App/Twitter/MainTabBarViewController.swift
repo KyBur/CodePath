@@ -29,6 +29,8 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "Verdana-Bold", size: 18)!]
+        UINavigationBar.appearance().titleTextAttributes = attributes
         // Do any additional setup after loading the view.
     }
     

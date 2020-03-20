@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="1932" y="-1332"/>
         </scene>
-        <!--Search Twitter-->
+        <!--Search Parent View Controller-->
         <scene sceneID="5cp-oQ-Z1M">
             <objects>
                 <viewController id="rnJ-vm-L8l" customClass="SearchParentViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -233,10 +233,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TBn-yf-e5P" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="eYh-Ph-WdX"/>
+                                    <constraint firstAttribute="height" constant="45" id="eYh-Ph-WdX"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="92o-eF-Dn2">
                                     <size key="itemSize" width="50" height="50"/>
@@ -259,7 +259,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c90-Nq-wJo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search Twitter" id="aJK-N4-LCW"/>
+                    <navigationItem key="navigationItem" id="aJK-N4-LCW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="jEt-RA-uAN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="9lp-Fy-R9Z"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonBarView" destination="TBn-yf-e5P" id="Hjf-IW-Pey"/>
                         <outlet property="containerView" destination="N8E-dH-AeT" id="ugB-Df-dCz"/>
@@ -277,24 +280,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05w-KY-FGb">
-                                <rect key="frame" x="158" y="323" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testing" translatesAutoresizingMaskIntoConstraints="NO" id="Npx-FZ-xNJ">
+                                <rect key="frame" x="0.0" y="65" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="gMc-dJ-eti"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Qs-eh-pHO">
+                                <rect key="frame" x="0.0" y="296" width="375" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55J-2p-qCQ">
+                                <rect key="frame" x="0.0" y="281" width="375" height="15"/>
+                                <color key="backgroundColor" red="0.95726102589999995" green="0.96830493210000002" blue="0.98431700470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="wwy-PE-wvT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="05w-KY-FGb" firstAttribute="centerY" secondItem="aE1-Xm-cpS" secondAttribute="centerY" id="TtH-OK-uvz"/>
-                            <constraint firstItem="05w-KY-FGb" firstAttribute="centerX" secondItem="aE1-Xm-cpS" secondAttribute="centerX" id="tOl-5K-1l7"/>
+                            <constraint firstItem="4Qs-eh-pHO" firstAttribute="top" secondItem="55J-2p-qCQ" secondAttribute="bottom" id="5cO-Zb-0MK"/>
+                            <constraint firstItem="55J-2p-qCQ" firstAttribute="top" secondItem="Npx-FZ-xNJ" secondAttribute="bottom" id="7qI-4P-D6y"/>
+                            <constraint firstItem="Npx-FZ-xNJ" firstAttribute="top" secondItem="sJl-yV-nIo" secondAttribute="top" constant="45" id="MsO-x6-Fb2"/>
+                            <constraint firstItem="4Qs-eh-pHO" firstAttribute="leading" secondItem="sJl-yV-nIo" secondAttribute="leading" id="Z7z-kE-NdZ"/>
+                            <constraint firstItem="4Qs-eh-pHO" firstAttribute="bottom" secondItem="sJl-yV-nIo" secondAttribute="bottom" id="a26-as-wRE"/>
+                            <constraint firstItem="55J-2p-qCQ" firstAttribute="leading" secondItem="sJl-yV-nIo" secondAttribute="leading" id="iia-8V-H2b"/>
+                            <constraint firstItem="55J-2p-qCQ" firstAttribute="trailing" secondItem="sJl-yV-nIo" secondAttribute="trailing" id="kXR-WC-ud7"/>
+                            <constraint firstItem="4Qs-eh-pHO" firstAttribute="trailing" secondItem="sJl-yV-nIo" secondAttribute="trailing" id="o5i-y2-huq"/>
+                            <constraint firstItem="4Qs-eh-pHO" firstAttribute="top" secondItem="Npx-FZ-xNJ" secondAttribute="bottom" constant="15" id="tGL-aW-vzc"/>
+                            <constraint firstItem="Npx-FZ-xNJ" firstAttribute="leading" secondItem="sJl-yV-nIo" secondAttribute="leading" id="wYa-8K-nRW"/>
+                            <constraint firstItem="Npx-FZ-xNJ" firstAttribute="trailing" secondItem="sJl-yV-nIo" secondAttribute="trailing" id="zT1-sM-NB8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sJl-yV-nIo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jV-PW-hpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2677" y="-587"/>
+            <point key="canvasLocation" x="2676" y="-587.85607196401804"/>
         </scene>
         <!--Tweet View Controller-->
         <scene sceneID="xMs-Of-wce">
@@ -423,10 +446,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xyc-gf-Z6n" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="RfO-XW-OFI"/>
+                                    <constraint firstAttribute="height" constant="45" id="RfO-XW-OFI"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xk5-wU-iTO">
                                     <size key="itemSize" width="50" height="50"/>
@@ -538,7 +561,7 @@
         <!--Messages-->
         <scene sceneID="YcX-36-PX8">
             <objects>
-                <viewController id="1H0-jT-Vhw" sceneMemberID="viewController">
+                <viewController id="1H0-jT-Vhw" customClass="MessagesViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZR-Fd-UJ4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -720,5 +743,6 @@
         <image name="add-tweet" width="650" height="650"/>
         <image name="favor-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
+        <image name="testing" width="512" height="272"/>
     </resources>
 </document>
