@@ -1,25 +1,20 @@
-# Project 3 - *Twitter Like App*
+# Instagram Like App
 
-A basic twitter clone app for signing into twitter and viewing tweets
+This is an Instagram clone with a custom Parse backend that allows a user to post photos and view a global photos feed.
 
 ## User Stories
 
-The following features were implemented:
+The following **required** functionality is completed:
 
-- User sees app icon in home screen and styled launch screen.
-- User can log in
-- User can log out
-- User stays logged in across restarts
-- User can view tweets with the user profile picture, username, and tweet text
-- User can pull to refresh
-- User can load past tweets infinitely
-- User can compose a tweet
-- User can favorite a tweet
-- User can retweet a tweet
+- User sees app icon in home screen and styled launch screen. (1pt)
+- User can sign up to create a new account. (1pt)
+- User can log in. (1pt)
+- User can take a photo, add a caption, and post it to the server. (3pt)
+- User can view the last 20 posts. (4pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src="https://i.imgflip.com/3sexrg.gif" width=250><br>
+<img src="https://i.imgflip.com/3tbfvo.gif" width=250><br>
 
